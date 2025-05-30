@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div>hello</div>
+      <div className='h-20 w-20 bg-customblue'>hello world</div>
     </>
   )
 }
