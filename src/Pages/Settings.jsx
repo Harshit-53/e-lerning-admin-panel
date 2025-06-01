@@ -1,15 +1,13 @@
 import React from 'react'
-import Sidebar from '../components/Sidebar'
-import Searchbar from '../components/Searchbar'
-const Settings = () => {
 
+const Settings = () => {
   return (
-   <div className='min-h-screen flex'>
-     <Sidebar></Sidebar>
-     <Searchbar></Searchbar>
-   </div>
-   
- 
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4">Settings</h1>
+      <div className="bg-white rounded-lg shadow p-6">
+        <p>Settings content will go here</p>
+      </div>
+    </div>
   )
 }
 
