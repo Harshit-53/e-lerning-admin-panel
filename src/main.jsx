@@ -3,9 +3,6 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import Settings from "./Pages/Settings.jsx"
-import Courses from './Pages/Courses.jsx'
-import Courses_mainpage from './Pages/Courses internals/Courses_mainpage.jsx'
-
 
 
 import { createBrowserRouter, createRoutesFromElements, Route ,RouterProvider} from 'react-router-dom'
@@ -13,20 +10,15 @@ import { createBrowserRouter, createRoutesFromElements, Route ,RouterProvider} f
 const router=createBrowserRouter(
   createRoutesFromElements(
     //Import your component and uncomment your route when done making the page
-    <>
-      <Route path='/' element={<App/>}>
-        {/* <Route path='/' element={<Dashboard/>}/> */}
-        <Route path='courses' element={<Courses/>}/> 
-        {/* <Route path='users' element={<Users/>}/> */}
-        {/* <Route path='payments' element={<Payments/>}/> */}
-        {/* <Route path='feedback' element={<Feedback/>}/> */}
-        {/* <Route path='reports' element={<Reports/>}/> */}
-        {/* <Route path='settings' element={<Settings/>}/> */}
-        
-      </Route>
-
-      <Route path='/edit-course' element={<Courses_mainpage />} />
-    </>
+    <Route path='/' element={<App/>}>
+      {/* <Route path='' element={<Dashboard/>}/>
+      <Route path='courses' element={<Courses/>}/> 
+      <Route path='users' element={<Users/>}/>
+      <Route path='payments' element={<Payments/>}/>
+      <Route path='feedback' element={<Feedback/>}/>
+      <Route path='reports' element={<Reports/>}/> */}
+      <Route path='settings' element={<Settings/>}/>
+    </Route>
   )
 )
 
