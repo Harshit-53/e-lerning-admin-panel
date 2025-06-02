@@ -1,6 +1,11 @@
 import Coursecard from "../cards/Coursecard";
+import { useState } from "react";
+import Addcourse from "../cards/Addcourse"
 
-export default function Courses({openAddcourse}){
+export default function Courses(){
+
+    const [addcourse, setAddcourse] = useState(false);
+
 
     return(
 
@@ -13,13 +18,16 @@ export default function Courses({openAddcourse}){
                 </span>
 
                 <span className="w-auto h-auto rounded-md py-1 px-3 bg-[#3B82F6] text-white font-bold hover:cursor-pointer"
-                onClick={openAddcourse} >
+                 onClick={()=> {
+                    console.log("opened add courses");
+                    setAddcourse(true);
+                 }}>
                     + Add courses
                 </span>
             </div>
 
             {/* Courses cards section */}
-            <div className="w-full h-full bg-[#D9D9D9] flex flex-wrap p-4 pb-20 mt-7 rounded-xl justify-between overflow-y-auto overflow-x-hidden hide-scrollbar" >
+            <div className="w-full h-[100vh] bg-[#D9D9D9] flex flex-wrap p-4 pb-20 mt-7 rounded-xl justify-between overflow-y-auto overflow-x-hidden hide-scrollbar" >
                 <Coursecard />
                 <Coursecard />
                 <Coursecard />
@@ -30,9 +38,13 @@ export default function Courses({openAddcourse}){
                 <Coursecard />
                 <Coursecard />
                 <Coursecard />
-                <Coursecard />
-                <Coursecard />
-                <Coursecard />
+                
+                {/* Conditionally render Addcourse popup */}
+                {addcourse && (
+                    <Addcourse
+                    onClose={() => setAddcourse(false)} // pass a handler to close popup
+                    />
+                )}
             </div>
         </>
     );
