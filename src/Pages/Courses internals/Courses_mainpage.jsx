@@ -1,14 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faTimes, faChevronDown, faPen } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
 import Quiz from './Quiz';
 import AddModule from './AddModule';
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString();
+
 
 export default function Courses_mainpage(){
     const [showDropdown, setShowDropdown] = useState(false);
