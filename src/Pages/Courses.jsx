@@ -12,16 +12,19 @@ export default function Courses(){
         <>
             {/* buttons and headers */}
             <div className="w-full h-auto bg-slate-100 flex items-center justify-between">
-                {/* all courses */}
-                <span className="h-auto w-auto py-2 px-4 rounded-xl bg-black text-white font-bold text-xl">
+                {/* Info Badge */}
+                <span className="px-2 py-1 md:px-4 md:py-2 bg-black text-white font-bold text-[12px] md:text-xl rounded-sm md:rounded-xl">
                     All courses here
                 </span>
 
-                <span className="w-auto h-auto rounded-md py-1 px-3 bg-[#3B82F6] text-white font-bold hover:cursor-pointer"
-                 onClick={()=> {
+                {/* Add Button */}
+                <span
+                    className="px-2 py-1 md:px-3 md:py-1 bg-blue-500 text-white font-bold text-[12px] md:text-[18px] rounded-md hover:cursor-pointer hover:bg-blue-600 transition"
+                    onClick={() => {
                     console.log("opened add courses");
                     setAddcourse(true);
-                 }}>
+                    }}
+                >
                     + Add courses
                 </span>
             </div>
