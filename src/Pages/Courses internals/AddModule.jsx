@@ -4,52 +4,42 @@ import AddAssignment from "./Addassignment";
 import AddLiveClass from "./Addliveclass";
 import AddQuiz from "./Addquiz";
 
-export default function AddModule({onClose}){
+export default function AddModule({ onClose }) {
     const [tab, setTab] = useState("lecture");
 
-    return(
-        <>
-            <div className="fixed rounded-xl left-1/4 top-1/5 flex items-center justify-center bg-slate-50
-            h-auto w-[700px] bg-opacity-20 z-10 backdrop-blur-sm">
+    return (
+        <div className="fixed inset-0 z-10 flex items-center justify-center  bg-opacity-40 backdrop-blur-sm p-2">
+            <div className="relative w-[90%] max-w-[700px] bg-slate-50 rounded-xl shadow-lg flex flex-col">
                 
                 <button
-                className="absolute top-0 right-1 text-black text-xl font-bold hover:cursor-pointer"
-                onClick={onClose}
+                    className="absolute top-0 right-0 text-black text-2xl font-bold hover:cursor-pointer outline-none"
+                    onClick={onClose}
                 >
-                &times;
+                    &times;
                 </button>
 
-                {/* Your Add Module content goes here */}
-                <div className="w-full h-full p-4 flex flex-col">
-                    {/* module name */}
-                    <div className="w-full flex p-3">
-                        <span className="font-semibold mr-2">Module Name: </span>
-                        <input type="text" className="border-none outline-none rounded-md px-2 bg-slate-300 flex-1"/>
-                    </div>
-                    {/* Adding options */}
-                    <div className="flex w-full items-center justify-between mb-3">
-                        <span className="bg-[#3B82F6] w-auto  font-semibold text-white px-2 py-1 rounded-xl hover:cursor-pointer" onClick={()=> setTab("lecture")}>
-                            Lecture add +
-                        </span>
-                        <span className="bg-[#3B82F6] w-auto  font-semibold text-white px-2 py-1 rounded-xl hover:cursor-pointer" onClick={()=> setTab("assignment")}>
-                            Assignment add +
-                        </span>
-                        <span className="bg-[#3B82F6] w-auto  font-semibold text-white px-2 py-1 rounded-xl hover:cursor-pointer" onClick={()=> setTab("live class")}>
-                            Live class add +
-                        </span>
-                        <span className="bg-[#3B82F6] w-auto font-semibold text-white px-2 py-1 rounded-xl mr-5 hover:cursor-pointer" onClick={()=> setTab("quiz")}>
-                            Quiz add +
-                        </span>
+                <div className="w-full p-4 flex flex-col gap-3">
+                    {/* Module Name Input */}
+                    <div className="w-full flex flex-col sm:flex-row gap-2 sm:items-center">
+                        <span className="font-semibold">Module Name:</span>
+                        <input type="text" className="border-none outline-none rounded-md px-2 py-1 bg-slate-200 flex-1" />
                     </div>
 
-                    {/* Section wise content */}
-                    {tab=="lecture" && <AddLecture></AddLecture>}
-                    {tab=="assignment" && <AddAssignment></AddAssignment>}
-                    {tab=="live class" && <AddLiveClass></AddLiveClass>}
-                    {tab=="quiz" && <AddQuiz></AddQuiz>}
+                    {/* Tab Buttons */}
+                    <div className="flex flex-wrap gap-2 justify-between">
+                        <button className="bg-blue-500 text-white px-3 py-1 rounded-xl text-sm" onClick={() => setTab("lecture")}>Lecture add +</button>
+                        <button className="bg-blue-500 text-white px-3 py-1 rounded-xl text-sm" onClick={() => setTab("assignment")}>Assignment add +</button>
+                        <button className="bg-blue-500 text-white px-3 py-1 rounded-xl text-sm" onClick={() => setTab("live class")}>Live class add +</button>
+                        <button className="bg-blue-500 text-white px-3 py-1 rounded-xl text-sm" onClick={() => setTab("quiz")}>Quiz add +</button>
+                    </div>
+
+                    {/* Tab Content */}
+                    {tab === "lecture" && <AddLecture />}
+                    {tab === "assignment" && <AddAssignment />}
+                    {tab === "live class" && <AddLiveClass />}
+                    {tab === "quiz" && <AddQuiz />}
                 </div>
             </div>
-
-        </>
+        </div>
     );
 }
