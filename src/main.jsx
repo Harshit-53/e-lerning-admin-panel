@@ -19,12 +19,12 @@ const router=createBrowserRouter(
     //Import your component and uncomment your route when done making the page
     <>
       <Route path='/' element={<App/>}>
-        <Route path='' element={<Dashboard/>}/>
+        <Route path='/' element={<Dashboard/>}/>
         <Route path='courses' element={<Courses/>}/>
         <Route path='users' element={<Users/>}/>
         <Route path='payments' element={<Payments/>}/>
         <Route path='feedback' element={<Feedback/>}/>
-        <Route path='reports' element={<Reports/>}/>
+        {/* <Route path='reports' element={<Reports/>}/> */}
         <Route path='settings' element={<Settings/>}/>
       </Route>
 
