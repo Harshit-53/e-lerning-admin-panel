@@ -12,6 +12,8 @@ import Feedback from "./Pages/Feedback.jsx";
 import Payments from "./Pages/Payments.jsx";
 import Reports from "./Pages/Reports.jsx";
 import Settings from "./Pages/Settings.jsx";
+import ChangePassword from './Pages/ChangePassword.jsx';
+import RestrictUsers from './Pages/RestrictUsers.jsx';
 import Courses_mainpage from './Pages/Courses internals/Courses_mainpage.jsx';
 import Users from './Pages/Users.jsx'
 
@@ -29,8 +31,11 @@ const router=createBrowserRouter(
       <Route path='reports' element={<Reports/>}/>
       <Route path='settings' element={<Settings/>}/>
       <Route path='settings/general' element={<General/>}/>
-      <Route path='settings/security' element={<Security/>}/>  
       <Route path='settings/about' element={<About/>}/> 
+      <Route path='settings/security' element={<Security/>}/>  
+      <Route path='settings/security/change-password' element={<ChangePassword/>}/>  
+      <Route path='settings/security/restrict-users' element={<RestrictUsers/>}/>  
+
       <Route path='*' element={<ErrorPage/>}/>
     </Route>
   )
