@@ -2,18 +2,18 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import Settings from "./Pages/Settings.jsx"
+import Courses from "./Pages/Courses.jsx";
+import Dashboard from "./Pages/Dashboard.jsx";
 import General from "./Pages/General.jsx"
 import Security from "./Pages/Security.jsx"
 import About from "./Pages/About.jsx"
-import ErrorPage from './Pages/ErrorPage.jsx'
-import Dashboard from './Pages/Dashboard.jsx'
-import Courses from './Pages/Courses.jsx'
-import Reports from './Pages/Reports.jsx'
-import Feedback from './Pages/Feedback.jsx'
-import Payments from './Pages/Payments.jsx'
+import ErrorPage from "./Pages/ErrorPage.jsx";
+import Feedback from "./Pages/Feedback.jsx";
+import Payments from "./Pages/Payments.jsx";
+import Reports from "./Pages/Reports.jsx";
+import Settings from "./Pages/Settings.jsx";
+import Courses_mainpage from './Pages/Courses internals/Courses_mainpage.jsx';
 import Users from './Pages/Users.jsx'
-
 
 import { createBrowserRouter, createRoutesFromElements, Route ,RouterProvider} from 'react-router-dom'
 
