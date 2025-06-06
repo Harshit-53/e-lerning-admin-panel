@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import {
-  LayoutDashboard, Book, Users, FileText, Video, Folder, BarChart2, CreditCard, MessageCircle, Settings,
-  ChevronLeft, ChevronRight
-} from 'lucide-react';
+import {LayoutDashboard, Book, Users, FileText, Video, Folder, BarChart2, CreditCard, MessageCircle, Settings,ChevronLeft, ChevronRight} from 'lucide-react';
 import ElearningLogo from '../icons/ElearningLogo.jsx';
+
 
 const navItems = [
   { label: 'Dashboard', icon: <LayoutDashboard size={20} />, to: '/' },
@@ -13,11 +11,12 @@ const navItems = [
   // { label: 'Assignments', icon: <FileText size={20} />, to: '/assignments' },
   // { label: 'Live Classes', icon: <Video size={20} />, to: '/live-classes' },
   // { label: 'Content', icon: <Folder size={20} />, to: '/content' },
-  { label: 'Reports', icon: <BarChart2 size={20} />, to: '/reports' },
+  // { label: 'Reports', icon: <BarChart2 size={20} />, to: '/reports' },
   { label: 'Payments', icon: <CreditCard size={20} />, to: '/payments' },
   { label: 'Feedback', icon: <MessageCircle size={20} />, to: '/feedback' },
   { label: 'Settings', icon: <Settings size={20} />, to: '/settings' },
 ];
+
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
