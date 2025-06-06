@@ -3,6 +3,9 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import Settings from "./Pages/Settings.jsx"
+import General from "./Pages/General.jsx"
+import Security from "./Pages/Security.jsx"
+import About from "./Pages/About.jsx"
 import ErrorPage from './Pages/ErrorPage.jsx'
 import Dashboard from './Pages/Dashboard.jsx'
 import Courses from './Pages/Courses.jsx'
@@ -25,6 +28,9 @@ const router=createBrowserRouter(
       <Route path='feedback' element={<Feedback/>}/>
       <Route path='reports' element={<Reports/>}/>
       <Route path='settings' element={<Settings/>}/>
+      <Route path='settings/general' element={<General/>}/>
+      <Route path='settings/security' element={<Security/>}/>  
+      <Route path='settings/about' element={<About/>}/> 
       <Route path='*' element={<ErrorPage/>}/>
     </Route>
   )
